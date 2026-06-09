@@ -12,8 +12,12 @@ class LocalPersistence(private val context: Context) {
 
     fun salvarItens(itens: List<Item>) {
         val json = gson.toJson(itens)
-        context.openFileOutput(fileName, Context.MODE_PRIVATE).use {
-            it.write(json.toByteArray())
+        try {
+            context.openFileOutput(fileName, Context.MODE_PRIVATE).use { output ->
+                output.write(json.toByteArray())
+            }
+        } catch (e: Exception) {
+            // Falha de escrita: manter o app funcional (sem crash).
         }
     }
 
