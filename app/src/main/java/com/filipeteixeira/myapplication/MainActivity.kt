@@ -77,18 +77,25 @@ class MainActivity : ComponentActivity() {
 fun ListaDeComprasScreen() {
     val context = LocalContext.current
     val persistence = remember { LocalPersistence(context) }
-    
+
     var itens by remember { mutableStateOf(listOf<Item>()) }
     var showDialog by remember { mutableStateOf(false) }
+    var loaded by remember { mutableStateOf(false) }
 
     // Carregar itens ao iniciar
     LaunchedEffect(Unit) {
-        itens = persistence.carregarItens()
+        itens = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            persistence.carregarItens()
+        }
+        loaded = true
     }
 
     // Salvar itens sempre que a lista mudar
-    LaunchedEffect(itens) {
-        persistence.salvarItens(itens)
+    LaunchedEffect(itens, loaded) {
+        if (!loaded) return@LaunchedEffect
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            persistence.salvarItens(itens)
+        }
     }
 
     val total = itens.sumOf { it.preco * it.quantidade }
