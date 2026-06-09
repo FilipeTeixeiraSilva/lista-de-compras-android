@@ -9,7 +9,7 @@ O aplicativo **Lista de Compras** funciona de forma **100% local**.
 * **Sem Conexão Externa:** Nesta versão, o aplicativo não se conecta a servidores externos ou APIs.
 
 ## 2. Armazenamento de Dados
-Todos os dados que você insere no aplicativo (itens da lista de compras, preços e quantidades) são armazenados **exclusivamente no seu dispositivo**. Se você desinstalar o aplicativo ou limpar os dados do sistema, essas informações serão removidas permanentemente, pois não temos backup em nuvem.
+Todos os dados que você insere no aplicativo (itens da lista de compras, preços e quantidades) são armazenados **exclusivamente no seu dispositivo**. Se você desinstalar o aplicativo ou limpar os dados do sistema, essas informações serão removidas permanentemente, pois o app não oferece sincronização/backup próprio em nuvem. *(Observação: dependendo das configurações do Android/Google Backup, o sistema pode realizar backup e restauração automáticos dos dados do app.)*
 
 ## 3. Permissões
 O aplicativo não solicita permissões sensíveis (como localização, contatos ou câmera). 
