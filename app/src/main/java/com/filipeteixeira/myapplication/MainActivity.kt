@@ -40,17 +40,20 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
+import com.filipeteixeira.myapplication.data.local.LocalPersistence
 import com.filipeteixeira.myapplication.data.model.Item
 import com.filipeteixeira.myapplication.ui.theme.MyApplicationTheme
 import java.text.NumberFormat
@@ -72,8 +75,28 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListaDeComprasScreen() {
+    val context = LocalContext.current
+    val persistence = remember { LocalPersistence(context) }
+
     var itens by remember { mutableStateOf(listOf<Item>()) }
     var showDialog by remember { mutableStateOf(false) }
+    var loaded by remember { mutableStateOf(false) }
+
+    // Carregar itens ao iniciar
+    LaunchedEffect(Unit) {
+        itens = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            persistence.carregarItens()
+        }
+        loaded = true
+    }
+
+    // Salvar itens sempre que a lista mudar
+    LaunchedEffect(itens, loaded) {
+        if (!loaded) return@LaunchedEffect
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            persistence.salvarItens(itens)
+        }
+    }
 
     val total = itens.sumOf { it.preco * it.quantidade }
     val ultimoPreco = itens.lastOrNull()?.preco?.let { formatarPreco(it) } ?: ""
