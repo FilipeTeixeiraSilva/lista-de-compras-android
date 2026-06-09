@@ -1,4 +1,4 @@
-package com.filipeteixeira.myapplication
+package com.filipeteixeira.listadecompras
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -52,9 +52,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.filipeteixeira.myapplication.data.local.LocalPersistence
-import com.filipeteixeira.myapplication.data.model.Item
-import com.filipeteixeira.myapplication.ui.theme.MyApplicationTheme
+import com.filipeteixeira.listadecompras.data.local.LocalPersistence
+import com.filipeteixeira.listadecompras.data.model.Item
+import com.filipeteixeira.listadecompras.ui.theme.MyApplicationTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.text.NumberFormat

@@ -1,4 +1,4 @@
-package com.filipeteixeira.myapplication.ui.theme
+package com.filipeteixeira.listadecompras.ui.theme
 
 import android.app.Activity
 import android.os.Build

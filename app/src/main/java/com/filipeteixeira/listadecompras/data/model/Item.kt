@@ -1,4 +1,4 @@
-package com.filipeteixeira.myapplication.data.model
+package com.filipeteixeira.listadecompras.data.model
 
 import com.google.gson.annotations.SerializedName
 

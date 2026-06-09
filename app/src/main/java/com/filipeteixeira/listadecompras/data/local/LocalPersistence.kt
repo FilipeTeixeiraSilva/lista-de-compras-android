@@ -1,7 +1,7 @@
-package com.filipeteixeira.myapplication.data.local
+package com.filipeteixeira.listadecompras.data.local
 
 import android.content.Context
-import com.filipeteixeira.myapplication.data.model.Item
+import com.filipeteixeira.listadecompras.data.model.Item
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File
