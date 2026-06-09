@@ -27,7 +27,7 @@ Uma aplicação Android moderna, simples e eficiente para gerenciar suas listas 
 
 |         Tela Principal          |          Adicionar Item          |
 |:-------------------------------:|:--------------------------------:|
-| ![Lista](screenshots/foto1.png) | ![Dialog](screenshots/foto2.png) |
+| ![Lista](screenshots/foto2.png) | ![Dialog](screenshots/foto1.png) |
 
 ## 🏗️ Como rodar o projeto
 
