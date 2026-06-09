@@ -17,13 +17,11 @@ Uma aplicação Android moderna, simples e eficiente para gerenciar suas listas 
 - **UI Framework:** [Jetpack Compose](https://developer.android.com/jetpack/compose) (Declarative UI)
 - **Arquitetura:** Componentes de Arquitetura do Android (State management com `remember` e `mutableStateOf`)
 - **Design System:** Material Design 3
-- **Networking:** Retrofit & OkHttp (Preparado para integração com API)
+- **Persistência Local:** Armazenamento automático da lista em JSON no dispositivo.
 - **JSON Parsing:** GSON
 - **Gerenciamento de Dependências:** Gradle (Kotlin DSL) com Version Catalog (`libs.versions.toml`)
 
 ## 📸 Capturas de Tela
-
-*(Dica: Adicione aqui imagens do seu app após fazer o upload para o GitHub)*
 
 |         Tela Principal          |          Adicionar Item          |
 |:-------------------------------:|:--------------------------------:|
@@ -44,4 +42,4 @@ Uma aplicação Android moderna, simples e eficiente para gerenciar suas listas 
 Este projeto está sob a licença MIT. Para detalhes sobre como seus dados são tratados, veja nossa [Política de Privacidade](PRIVACY.md).
 
 ---
-Desenvolvido por [Filipe Teixeira](https://github.com/seu-usuario) 🚀
+Desenvolvido por [Filipe Teixeira](https://github.com/FilipeTeixeiraSilva) 🚀

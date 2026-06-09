@@ -3,28 +3,28 @@
 Esta política de privacidade descreve como coletamos, usamos e protegemos suas informações ao usar o aplicativo **Lista de Compras**.
 
 ## 1. Coleta de Informações
-O aplicativo **Lista de Compras** foi desenvolvido para ser uma ferramenta simples de lista de compras.
-* **Dados Pessoais:** Nós não coletamos, armazenamos ou compartilhamos qualquer dado pessoal identificável (como nome, e-mail, telefone ou endereço).
-* **Dados de Uso:** Não coletamos estatísticas de uso ou dados analíticos sobre como você utiliza o app.
+O aplicativo **Lista de Compras** funciona de forma **100% local**. 
+* **Sem Coleta de Dados:** Não coletamos, armazenamos ou compartilhamos qualquer dado pessoal identificável (como nome, e-mail, telefone ou endereço).
+* **Sem Analytics:** Não utilizamos ferramentas de rastreamento ou estatísticas de uso.
+* **Sem Conexão Externa:** Nesta versão, o aplicativo não se conecta a servidores externos ou APIs.
 
 ## 2. Armazenamento de Dados
-Todos os dados que você insere no aplicativo (itens da lista de compras, preços e quantidades) são armazenados localmente no seu dispositivo ou em sua conta privada, caso o aplicativo utilize sincronização em nuvem futuramente. No momento, o funcionamento é local.
+Todos os dados que você insere no aplicativo (itens da lista de compras, preços e quantidades) são armazenados **exclusivamente no seu dispositivo**. Se você desinstalar o aplicativo ou limpar os dados do sistema, essas informações serão removidas permanentemente, pois não temos backup em nuvem.
 
 ## 3. Permissões
-O aplicativo pode solicitar as seguintes permissões:
-* **Internet:** Utilizada apenas se houver necessidade de comunicação com APIs para busca de produtos ou sincronização (se aplicável).
+O aplicativo não solicita permissões sensíveis (como localização, contatos ou câmera). 
 
-## 4. Compartilhamento de Dados com Terceiros
-Nós não vendemos, trocamos ou transferimos suas informações para terceiros.
+## 4. Compartilhamento de Dados
+Como não coletamos dados, não há compartilhamento de informações com terceiros, empresas ou anunciantes.
 
 ## 5. Segurança
-Estamos empenhados em garantir a segurança dos seus dados, utilizando as práticas recomendadas de desenvolvimento Android.
+Os seus dados estão protegidos pelas camadas de segurança do próprio sistema operacional Android.
 
 ## 6. Alterações nesta Política
-Podemos atualizar nossa Política de Privacidade de tempos em tempos. Recomendamos que você revise esta página periodicamente para quaisquer alterações.
+Esta política pode ser atualizada conforme novas funcionalidades forem adicionadas. Recomendamos a revisão periódica.
 
 ## 7. Contato
-Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco.
+Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato através do e-mail: **lipeatx@gmail.com**
 
 ---
-*Última atualização: 23 de Maio de 2024*
+*Última atualização: 20 de Fevereiro de 2025*
