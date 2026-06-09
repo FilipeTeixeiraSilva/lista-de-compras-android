@@ -51,11 +51,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.filipeteixeira.myapplication.data.local.LocalPersistence
 import com.filipeteixeira.myapplication.data.model.Item
 import com.filipeteixeira.myapplication.ui.theme.MyApplicationTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.text.NumberFormat
 import java.util.Locale
 import java.util.UUID
@@ -84,7 +85,7 @@ fun ListaDeComprasScreen() {
 
     // Carregar itens ao iniciar
     LaunchedEffect(Unit) {
-        itens = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+        itens = withContext(Dispatchers.IO) {
             persistence.carregarItens()
         }
         loaded = true
@@ -93,7 +94,7 @@ fun ListaDeComprasScreen() {
     // Salvar itens sempre que a lista mudar
     LaunchedEffect(itens, loaded) {
         if (!loaded) return@LaunchedEffect
-        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+        withContext(Dispatchers.IO) {
             persistence.salvarItens(itens)
         }
     }
